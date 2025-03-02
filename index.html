@@ -2,26 +2,10 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="description"
-        content="MoCam-VR">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="description" content="MoCam-VR">
+  <meta name="keywords" content="Telerobotics and Teleoperation, Dexterous Manipulation, Imitation Learning">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MoCam-VR: An Occlusion-Resilient Low-Cost Dexterous Hand-arm
-Teleoperation System for Imitation Learning</title>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'G-PYVRSFMDRL');
-  </script>
+  <title>MoCam-VR</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -30,66 +14,56 @@ Teleoperation System for Imitation Learning</title>
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+
+  <link rel="icon" href="./static/images/favicon.svg?">
+
+  <meta property="og:site_name" content="MoCam-VR" />
+  <meta property="og:type" content="video.other" />
+  <meta property="og:title" content="An Occlusion-Resilient Low-Cost Dexterous Hand-arm Teleoperation System for Imitation Learning" />
+  <meta property="og:description" content="An Occlusion-Resilient Low-Cost Dexterous Hand-arm Teleoperation System for Imitation Learning" />
+  <meta property="og:url" content="https://wzimo6.github.io/MoCam-VR/" />
+  <meta property="og:image" content="https://github.com/WZimo6/MoCam-VR/blob/main/static/images/Figure1.pdf" />
+  <meta property="og:image:secure" content="https://github.com/WZimo6/MoCam-VR/blob/main/static/images/Figure1.pdf" />
+  <meta property="og:video" content="" />
+  <meta property="og:video:secure" content="" />
+
+  <meta property="article:publisher" content="https://github.com/WZimo6" />
+<!--   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Minimizing Energy Consumption Leads to the Emergence of Gaits in Legged Robots" />
+  <meta name="twitter:description" content="Fu, Kumar, Malik, Pathak. Minimizing Energy Consumption Leads to the Emergence of Gaits in Legged Robots." />
+  <meta name="twitter:url" content="https://energy-locomotion.github.io/" />
+  <meta name="twitter:image" content="https://energy-locomotion.github.io/static/images/preview.jpg" />
+  <!-- <meta name="twitter:label1" content="Written by" />
+  <meta name="twitter:data1" content="Deepak Pathak" /> -->
+  <!-- <meta name="twitter:label2" content="Filed under" />
+  <meta name="twitter:data2" content="" /> -->
+  <meta name="twitter:site" content="@pathak2206" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <meta name="twitter:card" content="player" />
+  <meta name="twitter:image" content="https://energy-locomotion.github.io/static/images/preview.jpg" />
+  <meta name="twitter:player" content="https://www.youtube.com/embed/OQN5W2IAb9k" />
+  <meta name="twitter:player:width" content="640" />
+  <meta name="twitter:player:height" content="360" /> -->
 </head>
 <body>
-
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</nav>
-
-
+  
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">MoCam-VR: An Occlusion-Resilient Low-Cost Dexterous Hand-arm Teleoperation System for Imitation Learning</h1>
+          <h1 class="title is-1 publication-title">MoCam-VR:</h1><h2 class = "title is-34 publication-title">An Occlusion-Resilient Low-Cost Dexterous Hand-arm Teleoperation System for Imitation Learning</h2>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="">Zimo Wang</a><sup>1</sup>,</span>
@@ -435,11 +409,7 @@ Teleoperation System for Imitation Learning</title>
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+    <pre><code>
 }</code></pre>
   </div>
 </section>
@@ -448,31 +418,14 @@ Teleoperation System for Imitation Learning</title>
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
+      <a href="" class="large-font bottom_buttons">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+      <!-- <a class="large-font bottom_buttons" disabled>
         <i class="fab fa-github"></i>
-      </a>
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
-          </p>
-        </div>
-      </div>
+      </a> -->
+      <br />
+      <p>Page template borrowed from <a href="https://worldsheet.github.io/"><span class="dnerf">Worldsheet</span></a> and <a href="https://nerfies.github.io/"><span class="dnerf">Nerfies</span></a>.</p>
     </div>
   </div>
 </footer>
