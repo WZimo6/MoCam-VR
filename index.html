@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+        content="MoCam-VR">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>MoCam-VR: An Occlusion-Resilient Low-Cost Dexterous Hand-arm
+Teleoperation System for Imitation Learning</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -258,31 +259,22 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            We introduce MoCam-VR (Motion Capture Camera System), 
+            a low-cost teleoperation system designed for hand-arm manipulation.
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
+            MoCam-VR integrates a dynamic camera setup that can maintain an optimal perspective of the hand. 
+            This innovative design eliminates finger occlusion and expands the range of motion. By leveraging
+            multi-perspective views displayed in VR, MoCam-VR effectively addresses environmental occlusion. 
+            With properly configured camera perspectives and visual feedback, it ensures a correct human-robot 
+            mapping without requiring any calibration, enabling natural and intuitive teleoperation regardless 
+            of the operator's position—whether facing the robot's front, back, or side.
           </p>
           <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            Experimental results demonstrate that MoCam-VR outperforms other low-cost vision-based systems in terms
+            of dexterity and reliability, while achieving performance comparable to high-end motion capture solutions
+            across a variety of tasks. Constructed using off-the-shelf components and 3D printed parts, MoCam-VR is
+            affordable and easily replicable.
           </p>
         </div>
       </div>
