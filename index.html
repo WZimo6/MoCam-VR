@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
 
+  <link rel="stylesheet" href="./static/css/styles.css">
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
@@ -196,7 +197,7 @@
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column is-four-fifths has-background-light p-5 rounded">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
@@ -221,11 +222,14 @@
       </div>
     </div>
     <!--/ Abstract. -->
+  </div>
+</section>
+
 
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
+        <h2 class="title is-3">Introductioin</h2>
         <div class="publication-video">
           <video controls width="100%">
             <source src="./static/videos/MoCamVR.mp4" type="video/mp4">
@@ -241,120 +245,184 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <!--/ Matting. -->
-
-    <!-- Animation. -->
+    <!-- Method. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
-        <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div>
-        <br/>
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
+        <h2 class="title is-3">Method</h2>
         <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
+          <img src="./static/images/SystemLayout.png" alt="System Layout" style="max-width: 100%; height: auto;">
+          <p class="has-text-justified">
+            <strong>System Layout:</strong> Left: The user wears a VR headset and gloves to capture data. To mitigate environmental occlusion,
+            the VR headset receives multi-Perspective from additional RGB cameras. Right: With support for multiple operation modes,
+            the system enables multi end-effectors manipulation.
+          </p>
         </div>
-        <!--/ Re-rendering. -->
-
       </div>
     </div>
-    <!--/ Animation. -->
+    <!--/ Method. -->
+  </div>
+</section>
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Teleoperation Results. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Teleoperation Results</h2>
 
+        <!-- Analysis of Results -->
+        <div class="content">
+          <p>
+            We evaluate MoCam-VR by completing all ten tasks from the Telekinesis benchmark. Each task is executed ten times consecutively, and the success rate (SR) is recorded. Our results highlight MoCam-VR’s exceptional performance among vision-based low-cost teleoperation systems. As shown in the table above, MoCam-VR achieves a perfect success rate (10/10) in eight out of the ten tasks, outperforming both Telekinesis and AnyTeleop in complex tasks such as Box Rotation, Cup Stack, and Open Drawer & Pickup Cup.
+          </p>
+          <p>
+            MoCam-VR demonstrates consistent superiority in tasks requiring precise dexterity and stability, such as Scissor Pickup and Two Cup Stacking, where even a minor error in hand reconstruction could lead to failure. Notably, in the Open Drawer task, MoCam-VR achieved a perfect score despite the added complexity of requiring the drawer to be opened by grasping the handle, compared to AnyTeleop’s simpler approach.
+          </p>
+          <p>
+            Compared to AnyTeleop, which relies solely on fixed RGB or RGB-D cameras, MoCam-VR’s hand-mounted camera maintains an optimal viewpoint, minimizing finger occlusion and enabling more accurate hand pose estimation. In tasks prone to environmental occlusion, such as Open Drawer & Pickup Cup, MoCam-VR achieves a 100% success rate due to the additional perspectives provided by multiple cameras, offering a clearer view of objects and enabling more precise grasping.
+          </p>
+        </div>
+
+        <!-- Pagination Bar. -->
+        <div class="tabs is-centered" style="max-width: 100%;">
+          <ul class="tab-row">
+            <!-- 第一栏 -->
+            <div class="tab-column">
+              <li><a data-video="Pickup Dice Toy">Pickup Dice Toy</a></li>
+              <li><a data-video="Pick up Plushies Toy">Pickup Fabric Toy</a></li>
+              <li><a data-video="Box Rotate">Box Rotation</a></li>
+              <li><a data-video="Scissor Pickup">Scissor Pickup</a></li>
+              <li><a data-video="Cup Stacking">Cup Stack</a></li>
+            </div>
+            <!-- 第二栏 -->
+            <div class="tab-column">
+              <li><a data-video="Two Same-Sized Cup Stacking">Two Cup Stacking</a></li>
+              <li><a data-video="Pouring Cubes onto Plate">Pouring Cubes onto Plate</a></li>
+              <li><a data-video="Cup into Plate">Cup Into Plate</a></li>
+              <li><a data-video="Open Drawer">Open Drawer</a></li>
+              <li><a data-video="Open Drawer and Pick Cup">Open Drawer & Pickup Cup</a></li>
+            </div>
+          </ul>
+        </div>
+
+        <!-- Video and Description. -->
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+            <!-- Video -->
+            <h3 class="title is-4">Video</h3>
+            <div id="video-container" class="publication-video">
+              <video id="selected-video" controls muted playsinline width="100%">
+                <source id="video-source" src="" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <!-- Task Description -->
+            <h3 class="title is-4">Task Description</h3>
+            <p id="task-description" class="has-text-justified"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ Teleoperation Results. -->
   </div>
 </section>
 
 
-<section class="section" id="BibTeX">
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Comparison Table. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Success Rate Comparison</h2>
+        <div class="content">
+          <table class="table is-bordered is-striped is-fullwidth" style="font-size: 0.9em; width: 80%; margin: 0 auto;">
+            <thead>
+              <tr>
+                <th>Task</th>
+                <th><a href="https://robotic-telekinesis.github.io/" target="_blank">Telekinesis</a></th>
+                <th><a href="https://yzqin.github.io/anyteleop/" target="_blank">AnyTeleop</a></th>
+                <th>Ours</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Pickup Dice Toy</td>
+                <td>9/10</td>
+                <td><strong>10/10</strong></td>
+                <td><strong>10/10</strong></td>
+              </tr>
+              <tr>
+                <td>Pickup Fabric Toy</td>
+                <td>9/10</td>
+                <td><strong>10/10</strong></td>
+                <td><strong>10/10</strong></td>
+              </tr>
+              <tr>
+                <td>Box Rotation</td>
+                <td>6/10</td>
+                <td>6/10</td>
+                <td><strong>10/10</strong></td>
+              </tr>
+              <tr>
+                <td>Scissor Pickup</td>
+                <td>7/10</td>
+                <td>8/10</td>
+                <td><strong>9/10</strong></td>
+              </tr>
+              <tr>
+                <td>Cup Stack</td>
+                <td>6/10</td>
+                <td>9/10</td>
+                <td><strong>10/10</strong></td>
+              </tr>
+              <tr>
+                <td>Two Cup Stacking</td>
+                <td>3/10</td>
+                <td>7/10</td>
+                <td><strong>9/10</strong></td>
+              </tr>
+              <tr>
+                <td>Pouring Cubes onto Plate</td>
+                <td>7/10</td>
+                <td>7/10</td>
+                <td><strong>10/10</strong></td>
+              </tr>
+              <tr>
+                <td>Cup Into Plate</td>
+                <td>8/10</td>
+                <td><strong>10/10</strong></td>
+                <td><strong>10/10</strong></td>
+              </tr>
+              <tr>
+                <td>Open Drawer</td>
+                <td>9/10</td>
+                <td><strong>10/10</strong></td>
+                <td><strong>10/10</strong></td>
+              </tr>
+              <tr>
+                <td>Open Drawer & Pickup Cup</td>
+                <td>6/10</td>
+                <td>9/10</td>
+                <td><strong>10/10</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!--/ Comparison Table. -->
+  </div>
+</section>
+
+
+
+<!-- <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>
 </code></pre>
   </div>
-</section>
+</section> -->
 
 
 <footer class="footer">
@@ -367,10 +435,11 @@
         <i class="fab fa-github"></i>
       </a> -->
       <br />
-      <p>Page template borrowed from <a href="https://nerfies.github.io"><span class="dnerf">Nerfies</span></a> and <a href="https://energy-locomotion.github.io/"><span class="dnerf">Energy Locomotion</span></a>.</p>
+      <p>Page template borrowed from <a href="https://nerfies.github.io"><span class="dnerf">Nerfies</span></a> and <a href="https://xingyu-lin.github.io/spawnnet/"><span class="dnerf">spawnnet</span></a>.</p>
     </div>
   </div>
 </footer>
 
+  <script src="./static/js/scripts.js"></script>
 </body>
 </html>
