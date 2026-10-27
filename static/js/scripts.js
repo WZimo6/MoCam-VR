@@ -4,8 +4,8 @@ const videoMap = {
         description: "Rotate a box."
     },
     "Cup into Plate": {
-        src: "./static/videos/Cup into Plate 10 speed up.mp4",
-        description: "Place a cup into a plate."
+        src: "./static/videos/Cup Into Plate 10 speed up.mp4",
+        description: "Place a cup onto a plate."
     },
     "Cup Stacking": {
         src: "./static/videos/Cup Stacking 10 speed up.mp4",
@@ -21,11 +21,11 @@ const videoMap = {
     },
     "Pick up Plushies Toy": {
         src: "./static/videos/Pick up Plushies toy 10 speed up.mp4",
-        description: "Grasp a fabric toy placed on the table and pick up."
+        description: "Grasp a fabric toy placed on the table and lift it."
     },
     "Pickup Dice Toy": {
         src: "./static/videos/Pickup Dice Toy 10 speed up.mp4",
-        description: "Grasp a dice toy placed on the table and pick up."
+        description: "Grasp a dice toy placed on the table and lift it."
     },
     "Pouring Cubes onto Plate": {
         src: "./static/videos/Pouring Cubes onto Plate 10 speed up.mp4",
